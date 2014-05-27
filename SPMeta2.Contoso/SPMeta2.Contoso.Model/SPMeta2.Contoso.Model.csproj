@@ -52,9 +52,9 @@
     <Compile Include="Consts\CntsConsts.cs" />
     <Compile Include="Definitions\CntsListsViews.cs" />
     <Compile Include="Definitions\CntsQuickLaunchNavigation.cs" />
-    <Compile Include="Definitions\CntWebFeatures.cs" />
-    <Compile Include="Definitions\CntSiteFeatures.cs" />
-    <Compile Include="Definitions\CntWebs.cs" />
+    <Compile Include="Definitions\CntsWebFeatures.cs" />
+    <Compile Include="Definitions\CntsSiteFeatures.cs" />
+    <Compile Include="Definitions\CntsWebs.cs" />
     <Compile Include="Definitions\CntsCustomActions.cs" />
     <Compile Include="Definitions\CntsContentTypes.cs" />
     <Compile Include="Definitions\CntsLists.cs" />

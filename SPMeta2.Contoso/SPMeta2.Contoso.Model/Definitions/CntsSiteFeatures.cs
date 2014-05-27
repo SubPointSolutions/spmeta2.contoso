@@ -9,7 +9,7 @@ using SPMeta2.Enumerations;
 
 namespace SPMeta2.Contoso.Model.Definitions
 {
-    public static class CntWebFeatures
+    public static class CntsSiteFeatures
     {
         #region properties
 
