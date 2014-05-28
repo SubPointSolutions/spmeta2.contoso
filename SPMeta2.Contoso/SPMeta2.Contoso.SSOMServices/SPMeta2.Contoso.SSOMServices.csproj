@@ -30,6 +30,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SPMeta2">
+      <HintPath>..\packages\SPMeta2.Core.1.0.148.2139\lib\SPMeta2.dll</HintPath>
+    </Reference>
+    <Reference Include="SPMeta2.Common">
+      <HintPath>..\packages\SPMeta2.Core.1.0.148.2139\lib\SPMeta2.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="SPMeta2.SSOM">
+      <HintPath>..\packages\SPMeta2.SSOM.Foundation.1.0.148.2139\lib\SPMeta2.SSOM.dll</HintPath>
+    </Reference>
+    <Reference Include="SPMeta2.SSOM.Behaviours">
+      <HintPath>..\packages\SPMeta2.SSOM.Foundation.1.0.148.2139\lib\SPMeta2.SSOM.Behaviours.dll</HintPath>
+    </Reference>
+    <Reference Include="SPMeta2.Syntax.Default">
+      <HintPath>..\packages\SPMeta2.Core.1.0.148.2139\lib\SPMeta2.Syntax.Default.dll</HintPath>
+    </Reference>
+    <Reference Include="SPMeta2.Validation">
+      <HintPath>..\packages\SPMeta2.Validation.1.0.148.2139\lib\SPMeta2.Validation.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,6 +58,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

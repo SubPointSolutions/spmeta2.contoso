@@ -30,14 +30,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SPMeta2">
-      <HintPath>..\packages\SPMeta2.Core.1.0.147.1439\lib\SPMeta2.dll</HintPath>
+    <Reference Include="SPMeta2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SPMeta2.Core.1.0.148.2139\lib\SPMeta2.dll</HintPath>
     </Reference>
-    <Reference Include="SPMeta2.Common">
-      <HintPath>..\packages\SPMeta2.Core.1.0.147.1439\lib\SPMeta2.Common.dll</HintPath>
+    <Reference Include="SPMeta2.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SPMeta2.Core.1.0.148.2139\lib\SPMeta2.Common.dll</HintPath>
     </Reference>
-    <Reference Include="SPMeta2.Syntax.Default">
-      <HintPath>..\packages\SPMeta2.Core.1.0.147.1439\lib\SPMeta2.Syntax.Default.dll</HintPath>
+    <Reference Include="SPMeta2.Syntax.Default, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SPMeta2.Core.1.0.148.2139\lib\SPMeta2.Syntax.Default.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
