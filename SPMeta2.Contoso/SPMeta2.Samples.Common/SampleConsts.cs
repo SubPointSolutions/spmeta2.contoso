@@ -14,6 +14,8 @@ namespace SPMeta2.Samples.Common
         {
             SSOM_SiteUrl = "http://sp2013dev:31415";
             CSOM_SiteUrl = "http://sp2013dev:31415";
+
+            DefaultMetadataGroup = "SPMeta2 Samples";
         }
 
         #endregion
@@ -22,6 +24,8 @@ namespace SPMeta2.Samples.Common
 
         public static string SSOM_SiteUrl { get; set; }
         public static string CSOM_SiteUrl { get; set; }
+
+        public static string DefaultMetadataGroup { get; set; }
 
         #endregion
     }
