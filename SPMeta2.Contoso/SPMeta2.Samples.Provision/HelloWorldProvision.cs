@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Text;
 using Microsoft.SharePoint.Client.WebParts;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.SharePoint.Client;
 using Microsoft.SharePoint;
 using SPMeta2.BuiltInDefinitions;
 using SPMeta2.CSOM.Services;
+using SPMeta2.Samples.Provision.Utils;
 using SPMeta2.SSOM.Services;
 using SPMeta2.Models;
 using SPMeta2.Samples.Common;
@@ -854,6 +856,52 @@ namespace SPMeta2.Samples.Provision
                                                      .AddFolder(Q2)
                                                      .AddFolder(Q3)
                                                      .AddFolder(Q4);
+                                             });
+                                     });
+                             });
+
+            DeployWebModel(webModel);
+        }
+
+        [TestMethod]
+        [TestCategory("Hello world provision")]
+        public void Deploy_ModuleFiles()
+        {
+            // Step 1, define security groups
+            var helloModuleFile = new ModuleFileDefinition
+            {
+                FileName = "hello-module.txt",
+                Content = Encoding.UTF8.GetBytes("A hello world module file provision.")
+            };
+
+            var angularFile = new ModuleFileDefinition
+            {
+                FileName = "angular.min.js",
+                Content = Encoding.UTF8.GetBytes(ResourceReader.ReadFromResourceName("Modules.js.angular.min.js"))
+            };
+
+            var jQueryFile = new ModuleFileDefinition
+            {
+                FileName = "jquery-1.11.1.min.js",
+                Content = Encoding.UTF8.GetBytes(ResourceReader.ReadFromResourceName("Modules.js.jquery-1.11.1.min.js"))
+            };
+
+            var jsFolder = new FolderDefinition { Name = "spmeta2-custom-js" };
+
+            // deploy web model - list and add content type links to list
+            var webModel = SPMeta2Model
+                             .NewWebModel(web =>
+                             {
+                                 web
+                                     .AddList(BuiltInListDefinitions.StyleLibrary, list =>
+                                     {
+                                         list
+                                             .AddModuleFile(helloModuleFile)
+                                             .AddFolder(jsFolder, folder =>
+                                             {
+                                                 folder
+                                                     .AddModuleFile(angularFile)
+                                                     .AddModuleFile(jQueryFile);
                                              });
                                      });
                              });

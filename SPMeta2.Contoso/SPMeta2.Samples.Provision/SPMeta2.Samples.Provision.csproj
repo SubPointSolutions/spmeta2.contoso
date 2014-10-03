@@ -89,6 +89,7 @@
   <ItemGroup>
     <Compile Include="HelloWorldProvision.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\ResourceReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -98,6 +99,11 @@
       <Project>{be0c656e-8ef6-4153-bb3e-418a54f1d5ea}</Project>
       <Name>SPMeta2.Samples.Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Modules\js\angular.min.js" />
+    <EmbeddedResource Include="Modules\js\jquery-1.11.1.min.js" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
