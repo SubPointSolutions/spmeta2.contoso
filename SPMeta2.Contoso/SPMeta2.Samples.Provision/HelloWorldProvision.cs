@@ -6,6 +6,7 @@ using Microsoft.SharePoint.Client;
 using Microsoft.SharePoint;
 using SPMeta2.BuiltInDefinitions;
 using SPMeta2.CSOM.Services;
+using SPMeta2.Samples.Provision.Base;
 using SPMeta2.Samples.Provision.Utils;
 using SPMeta2.SSOM.Services;
 using SPMeta2.Models;
@@ -18,7 +19,7 @@ using SPMeta2.Syntax.Default.Extensions;
 namespace SPMeta2.Samples.Provision
 {
     [TestClass]
-    public class HelloWorldProvision
+    public class HelloWorldProvision : ProvisionTestBase
     {
         #region samples
 
@@ -962,59 +963,6 @@ namespace SPMeta2.Samples.Provision
 
         #endregion
 
-        #region utils
-
-        protected void DeploySiteModel(ModelNode model)
-        {
-            DeploySiteModelAsCSOM(model);
-            DeploySiteModelAsSSOM(model);
-        }
-
-        protected void DeployWebModel(ModelNode model)
-        {
-            DeployWebModelAsCSOM(model);
-            DeployWebModelAsSSOM(model);
-        }
-
-        protected void DeploySiteModelAsCSOM(ModelNode model)
-        {
-            using (var clientContext = new ClientContext(SampleConsts.CSOM_SiteUrl))
-            {
-                var csomProvisionService = new CSOMProvisionService();
-                csomProvisionService.DeployModel(SPMeta2.CSOM.ModelHosts.SiteModelHost.FromClientContext(clientContext), model);
-            }
-        }
-
-        protected void DeploySiteModelAsSSOM(ModelNode model)
-        {
-            using (var site = new SPSite(SampleConsts.SSOM_SiteUrl))
-            {
-                var ssomProvisionService = new SSOMProvisionService();
-                ssomProvisionService.DeployModel(SPMeta2.SSOM.ModelHosts.SiteModelHost.FromSite(site), model);
-            }
-        }
-
-        protected void DeployWebModelAsCSOM(ModelNode model)
-        {
-            using (var clientContext = new ClientContext(SampleConsts.CSOM_SiteUrl))
-            {
-                var csomProvisionService = new CSOMProvisionService();
-                csomProvisionService.DeployModel(SPMeta2.CSOM.ModelHosts.WebModelHost.FromClientContext(clientContext), model);
-            }
-        }
-
-        protected void DeployWebModelAsSSOM(ModelNode model)
-        {
-            using (var site = new SPSite(SampleConsts.SSOM_SiteUrl))
-            {
-                using (var web = site.OpenWeb())
-                {
-                    var ssomProvisionService = new SSOMProvisionService();
-                    ssomProvisionService.DeployModel(SPMeta2.SSOM.ModelHosts.WebModelHost.FromWeb(web), model);
-                }
-            }
-        }
-
-        #endregion
+       
     }
 }
