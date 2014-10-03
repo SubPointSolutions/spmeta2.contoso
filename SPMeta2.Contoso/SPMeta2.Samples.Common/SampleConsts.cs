@@ -12,23 +12,16 @@ namespace SPMeta2.Samples.Common
 
         static SampleConsts()
         {
-            SSOM.SiteUrl = "http://sp2013dev:31415";
-            CSOM.SiteUrl = "http://sp2013dev:31415";
+            SSOM_SiteUrl = "http://sp2013dev:31415";
+            CSOM_SiteUrl = "http://sp2013dev:31415";
         }
 
         #endregion
 
         #region properties
 
-        public static class SSOM
-        {
-            public static string SiteUrl { get; set; }
-        }
-
-        public static class CSOM
-        {
-            public static string SiteUrl { get; set; }
-        }
+        public static string SSOM_SiteUrl { get; set; }
+        public static string CSOM_SiteUrl { get; set; }
 
         #endregion
     }

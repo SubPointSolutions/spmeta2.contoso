@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPMeta2.Samples.HelloWorld"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPMeta2.Samples.Common", "SPMeta2.Samples.Common\SPMeta2.Samples.Common.csproj", "{BE0C656E-8EF6-4153-BB3E-418A54F1D5EA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_3rd party", "_3rd party", "{59D09018-8DC0-4D92-93B2-D526CC37B046}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPMeta2.Samples.Dependencies", "SPMeta2.Samples.Dependencies\SPMeta2.Samples.Dependencies.csproj", "{0E39D263-24F3-4657-9B21-138B861164E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,11 +27,16 @@ Global
 		{BE0C656E-8EF6-4153-BB3E-418A54F1D5EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE0C656E-8EF6-4153-BB3E-418A54F1D5EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE0C656E-8EF6-4153-BB3E-418A54F1D5EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E39D263-24F3-4657-9B21-138B861164E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E39D263-24F3-4657-9B21-138B861164E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E39D263-24F3-4657-9B21-138B861164E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E39D263-24F3-4657-9B21-138B861164E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E1E9D86F-BCF9-4F00-97C1-B0C8E8E7144E} = {54D3F05A-E8F2-44B7-8D43-86F902E694BD}
+		{0E39D263-24F3-4657-9B21-138B861164E7} = {59D09018-8DC0-4D92-93B2-D526CC37B046}
 	EndGlobalSection
 EndGlobal
