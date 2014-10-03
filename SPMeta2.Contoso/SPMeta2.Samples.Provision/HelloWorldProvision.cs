@@ -597,6 +597,57 @@ namespace SPMeta2.Samples.Provision
 
         [TestMethod]
         [TestCategory("Hello world provision")]
+        public void Deploy_WebParts()
+        {
+            // Step 1, define security groups
+            var gettingStarted = new SPMeta2.Definitions.WebPartDefinition
+            {
+                Title = "Getting started with site",
+                Id = "spmGettingStarted",
+                ZoneId = "Main",
+                ZoneIndex = 100,
+                WebpartXmlTemplate = ResourceReader.ReadFromResourceName("Templates.Webparts.Get started with your site.webpart")
+            };
+
+            var contentEditor = new SPMeta2.Definitions.WebPartDefinition
+            {
+                Title = "SPMeta2 Content Editor Webpart",
+                Id = "spmContentEditorWebpart",
+                ZoneId = "Main",
+                ZoneIndex = 200,
+                WebpartXmlTemplate = ResourceReader.ReadFromResourceName("Templates.Webparts.Content Editor.dwp")
+            };
+
+            var webpartPage = new WebPartPageDefinition
+            {
+                Title = "Getting started",
+                FileName = "Getting-Started.aspx",
+                PageLayoutTemplate = BuiltInWebPartPageTemplates.spstd1
+            };
+
+            // Step 2, define web model and artifact relationships - add security groups t the web 
+            var model = SPMeta2Model
+                             .NewWebModel(web =>
+                             {
+                                 web
+                                   .AddList(BuiltInListDefinitions.SitePages, list =>
+                                   {
+                                       list
+                                           .AddWebPartPage(webpartPage, page =>
+                                           {
+                                               page
+                                                   .AddWebPart(gettingStarted)
+                                                   .AddWebPart(contentEditor);
+                                           });
+                                   });
+                             });
+
+            // Step 3, deploy model
+            DeployWebModel(model);
+        }
+
+        [TestMethod]
+        [TestCategory("Hello world provision")]
         public void Deploy_CustomUserActions()
         {
             // Step 1, define security groups

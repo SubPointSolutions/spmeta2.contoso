@@ -93,6 +93,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <EmbeddedResource Include="Templates\Webparts\Content Editor.dwp" />
+    <EmbeddedResource Include="Templates\Webparts\Get started with your site.webpart" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SPMeta2.Samples.Common\SPMeta2.Samples.Common.csproj">
