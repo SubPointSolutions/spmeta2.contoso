@@ -87,7 +87,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="BaseProvision.cs" />
+    <Compile Include="HelloWorldProvision.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
