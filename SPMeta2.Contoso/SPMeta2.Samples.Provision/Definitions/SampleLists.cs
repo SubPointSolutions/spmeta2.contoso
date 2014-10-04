@@ -14,7 +14,7 @@ namespace SPMeta2.Samples.Provision.Definitions
         {
             public static ListDefinition CustomerDocs = new ListDefinition
             {
-                Title = "Documents",
+                Title = "Customer Documents",
                 Url = "CustomerDocs",
                 Description = "Stores customer related documents.",
                 TemplateType = BuiltInListTemplateTypeId.DocumentLibrary

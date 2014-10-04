@@ -20,7 +20,7 @@ namespace SPMeta2.Samples.Provision
 
         [TestMethod]
         [TestCategory("Scenarios provision")]
-        public void Deploy_WebHierarchy()
+        public void Deploy_CRMWebHierarchy()
         {
             var model = SPMeta2Model
                              .NewWebModel(web =>
@@ -53,7 +53,7 @@ namespace SPMeta2.Samples.Provision
 
         [TestMethod]
         [TestCategory("Scenarios provision")]
-        public void Deploy_Metadata()
+        public void Deploy_CRMMetadata()
         {
             var model = SPMeta2Model
                            .NewSiteModel(site =>
@@ -105,7 +105,7 @@ namespace SPMeta2.Samples.Provision
 
         [TestMethod]
         [TestCategory("Scenarios provision")]
-        public void Deploy_CustomerSite()
+        public void Deploy_CRMCustomerSite()
         {
             var customerName = string.Format("Customer_{0}", Environment.TickCount);
             var newCustomerWeb = new WebDefinition
@@ -120,8 +120,9 @@ namespace SPMeta2.Samples.Provision
                             {
                                 web
                                     .AddList(SampleLists.CustomerSite.CustomerDocs)
-                                    .AddList(SampleLists.CustomerSite.CustomerDocs)
-                                    .AddList(SampleLists.CustomerSite.CustomerDocs)
+                                    .AddList(SampleLists.CustomerSite.CustomerIssues)
+                                    .AddList(SampleLists.CustomerSite.CustomerTasks)
+                                    .AddList(SampleLists.CustomerSite.KPI)
                                     .AddList(BuiltInListDefinitions.SitePages, pages =>
                                     {
                                         pages
