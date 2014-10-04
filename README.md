@@ -7,7 +7,7 @@ Is has step-by-step guide how to provision particular SharePoint artifact (such 
 
 Check SPMeta2.Samples.Provision project, in particular HelloWorldProvision and ScenariosProvision classes.
 
-It should help to get started with SPMeta2 library and simplify your provision routines. 
+It should help to get started with SPMeta2 library and simplify your provision routines.
 If you have particular case you would like to be implemented in sample project - just let us know.
 
 - <a href='https://www.yammer.com/spmeta2feedback'>SPMeta2 Feedback group @ Yammer</a>
