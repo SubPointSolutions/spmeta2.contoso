@@ -1,4 +1,4 @@
-spmeta2.contoso
+SPMeta2.Contoso
 ===============
 
 SPMeta2.Contoso is 'getting started' project full of samples for <a href='https://github.com/SubPointSolutions/spmeta2'>SPMeta2 library</a>.
